@@ -1,0 +1,222 @@
+.chat__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 62px;
+  background-color: transparent;
+  z-index: 1;
+  padding: 0 10px;
+  height: 54px;
+  position: absolute;
+  width: calc(100% + 56px);
+  bottom: 0;
+  z-index: 5;
+  transform: translateZ(456px);
+}
+
+.chat__footer > form {
+  width: 100%;
+  display: flex;
+}
+
+.chat__footer > form > div > .form__input-and-camera {
+  width: 950px;
+  display: flex;
+  background-color: white;
+  height: 44px;
+  border: solid 1px gray;
+  margin-right: 10px;
+  transition: all 300ms;
+  /*112px 56px*/
+  position: relative;
+}
+
+.chat__footer > form > div > div > .input {
+  display: flex;
+  height: 44px;
+  padding: 0 20px 0 20px;
+  border: none;
+  font-size: 15px;
+  margin-right: 10px;
+  font-family: Roboto, sans-serif;
+  transition: all 300ms;
+  width: calc(100% - 160px);
+  /*112px 56px*/
+  position: relative;
+}
+
+.chat__footer > form > div > div > .input:focus {
+  outline: none;
+}
+
+.chat__footer > form > div > div > .camera {
+  margin-left: 110px;
+}
+
+.chat__footer > form > .form__icons-input-and-camera {
+  display: flex;
+  width: 62rem;
+}
+
+@media (max-width: 760px) {
+  .chat__footer > form > .form__icons-input-and-camera {
+    width: 18.5rem;
+  }
+
+  .chat__footer > form > div > .form__input-and-camera {
+    width: 220px;
+    margin-right: 0;
+  }
+  .chat__footer > form > div > div > .input {
+    display: flex;
+    padding: 0 10px 0 10px;
+    font-size: 13px;
+    margin-right: 0;
+    width: 90%;
+  }
+  .chat__footer > form > div > div > .camera {
+    margin-left: 0px;
+  }
+}
+
+.emoji-box {
+  margin-left: 25px;
+}
+
+.emoji-icon {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.send__btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0px 0px 2px 0px #0000005e;
+  border: none;
+  transition: transform 150ms;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.send__btn:active {
+  transform: scale(0.75);
+}
+
+.send__btn:focus {
+  outline: none;
+}
+
+.send__btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.send__btn svg:nth-child(1) {
+  opacity: 0;
+  transform: translateX(-48%) translateY(-50%);
+}
+
+.send__animate-enter,
+.send__animate2-enter {
+  opacity: 0 !important;
+  transform: scale(0.8) translateX(-58%) translateY(-58%) !important;
+}
+
+.send__animate-enter-active,
+.send__animate2-enter-active {
+  opacity: 1 !important;
+  transform: scale(1) translateX(-50%) translateY(-50%) !important;
+  transition: opacity 200ms, transform 200ms !important;
+  transition-delay: 200ms !important;
+}
+
+.send__animate-enter-done,
+.send__animate2-enter-done {
+  opacity: 1 !important;
+}
+
+.send__animate-exit,
+.send__animate2-exit {
+  opacity: 1 !important;
+  transform: scale(1) translateX(-50%) translateY(-50%) !important;
+}
+
+.send__animate-exit-active,
+.send__animate2-exit-active {
+  opacity: 0 !important;
+  transform: scale(0.8) translateX(-58%) translateY(-58%) !important;
+  transition: opacity 200ms, transform 200ms !important;
+}
+
+.send__animate-exit-done,
+.send__animate2-exit-done {
+  opacity: 0 !important;
+}
+
+.send__animate2-enter {
+  transform: scale(0.8) translateX(-58%) translateY(-58%) !important;
+}
+
+.send__animate2-enter-active {
+  transform: scale(1) translateX(-47%) translateY(-50%) !important;
+}
+
+.send__animate2-exit {
+  transform: scale(1) translateX(-47%) translateY(-50%) !important;
+}
+
+.send__animate2-exit-active {
+  transform: scale(0.8) translateX(-57%) translateY(-58%) !important;
+}
+
+.record {
+  opacity: 0;
+  transition: opacity 300ms;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  right: 206px;
+  width: 135px;
+}
+
+.record > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 53px;
+}
+
+.record__redcircle {
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f21d2f;
+  animation: animate-record-circle 500ms infinite alternate;
+}
+
+.record__duration {
+  font-size: 15px;
+  font-weight: 500;
+  color: #737373;
+}
+
+.record > .MuiSvgIcon-root {
+  cursor: pointer;
+}
+
+@keyframes animate-record-circle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
