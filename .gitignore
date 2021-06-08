@@ -116,10 +116,7 @@ dist
 
 .vscode
 
-.firebasesrc
-firebase.json
 firestore.indexes.json
 storage.rules
 debug.log
 .firebase
-build
